@@ -30,7 +30,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
     try {
-        await client.connect();
+        // await client.connect();
         const booksCollection = client.db('Bookish').collection('books');
 
         // fetch all books data
@@ -53,5 +53,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`🚀 Server running on port ${port}`);
+    console.log(` Server running on port ${port}`);
 });
